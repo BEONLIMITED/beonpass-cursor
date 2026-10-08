@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="BEON PASS ON logo">
+<rect width="512" height="512" fill="#fff"/>
+<path fill="#000" fill-rule="evenodd" d="M162 158C104 158 60 201 60 255S104 352 162 352 264 309 264 255 220 158 162 158ZM162 205C133 205 112 227 112 255S133 306 162 306 213 283 213 255 191 205 162 205Z"/>
+<path fill="#000" d="M280 161H334L403 263V161H450V349H400L327 241V349H280Z"/>
+</svg>
