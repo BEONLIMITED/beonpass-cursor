@@ -1,50 +1,49 @@
 # BEON PASS for Cursor
 
-**BEON PASS** is one access wallet for people and AI, developed by **BEON LIMITED**. This open-source Cursor plugin connects Cursor to the existing BEON PASS remote MCP server, allowing authorized access to connected developer and cloud tools.
+**BEON PASS** is one access wallet for people and AI, developed by **BEON LIMITED**. This open-source Cursor plugin connects Cursor to the BEON PASS remote MCP server at `https://beonpass.com/mcp`, providing authorized access to connected developer and cloud services.
 
-## What it does
+## Features
 
-- Connect to the BEON PASS wallet using the remote MCP endpoint.
-- Work with connected providers such as GitHub, Supabase, Cloudflare, Vercel, Railway, and other providers supported by your account.
-- Select between personal and organization contexts and multiple provider accounts where available.
-- Respect BEON PASS access controls, resource restrictions, approvals, temporary access, and Autopilot grants.
+- Connect GitHub, Supabase, Cloudflare, Vercel, Railway, and other supported provider accounts through BEON PASS.
+- Work with multiple accounts per provider and personal or organization wallets.
+- Respect resource-level permissions, access requests, approvals, temporary access, and Autopilot authorization.
+- Perform read and write operations only when allowed by the provider and BEON PASS access controls.
+- Keep provider credentials in the BEON PASS authorization system rather than in this repository.
 
-The provider tools available depend on the connected accounts and their authorization. This plugin does not include or publish the BEON PASS backend.
+Available tools and permissions depend on each user's connected accounts, provider authorizations, and BEON PASS plan.
 
 ## Install and connect
 
-1. Install the plugin from Cursor Marketplace, or test locally by copying this repository into `~/.cursor/plugins/local/beonpass` and running **Developer: Reload Window**.
-2. Open Cursor's plugin/MCP settings and connect the `beonpass` server.
-3. Complete the BEON PASS OAuth sign-in in your browser when prompted.
-4. Connect provider accounts at [beonpass.com](https://beonpass.com) and grant the desired access.
-5. Ask Cursor to list your connected accounts or inspect an authorized resource.
+1. Install BEON PASS from Cursor Marketplace after publication. For local testing, place this repository under `~/.cursor/plugins/local/beonpass` and run **Developer: Reload Window**.
+2. In Cursor's plugin/MCP settings, connect the `beonpass` remote MCP server.
+3. Complete the browser-based BEON PASS OAuth authorization when prompted.
+4. At [beonpass.com](https://beonpass.com), connect your chosen provider accounts and configure access.
+5. Ask Cursor to inspect a permitted resource. Confirm the correct wallet and provider account before making changes.
 
-The MCP endpoint is `https://beonpass.com/mcp`. No API keys or credentials are bundled in this repository.
+No API tokens or credentials are bundled with the plugin. The MCP server requires user authentication.
 
 ## Example prompts
 
-- “Using BEON PASS, list my connected providers and tell me which account is active.”
-- “Using BEON PASS, list my GitHub repositories and Supabase projects that I can access.”
-- “Using BEON PASS, inspect this project's deployment status without changing anything.”
-- “Using BEON PASS, show access requests for my organization.”
+- “Using BEON PASS, show my connected providers and active wallet.”
+- “Using BEON PASS, list the GitHub repositories I can access.”
+- “Using BEON PASS, inspect the status of my Vercel deployments without making changes.”
+- “Using BEON PASS, show pending access requests for my organization.”
 
-## Pricing and marketplace policy
+## Pricing
 
-The **Cursor plugin package is free** to install. BEON PASS offers a free service tier and optional paid subscriptions for features beyond that tier. **Marketplace eligibility for optional paid service features must be confirmed with Cursor**, whose publisher terms prohibit direct or indirect fees for access to or use of marketplace plugins. Do not submit this repository as a compliant paid-service integration until Cursor clarifies that policy in writing.
+The **Cursor plugin is free to install**. BEON PASS offers a permanent free service tier for up to three active personal provider connections. Optional Pro and Team subscriptions offer additional BEON PASS service capabilities. Pricing and plan limitations are described on [beonpass.com](https://beonpass.com).
 
 ## Security and privacy
 
-The MCP server requires authentication. Access to third-party resources is governed by the connected providers and BEON PASS policies. Never paste credentials into Cursor prompts or commit them to this repository.
+BEON PASS enforces authorization and resource restrictions independently of this Cursor plugin. High-impact actions may require confirmation or approval. Do not put provider credentials, passwords, API keys, or tokens into chat prompts or source files.
 
 - [Documentation](https://beonpass.com/docs)
 - [Privacy policy](https://beonpass.com/privacy)
 - [Terms of service](https://beonpass.com/terms)
 - [Support](https://beonpass.com/support)
 
-## Publisher
+## Publisher and license
 
-BEON LIMITED — [beonpass.com](https://beonpass.com)
+Developed by **BEON LIMITED** — [beonpass.com](https://beonpass.com).
 
-## License
-
-The integration package in this repository is available under the MIT License. BEON PASS's hosted service and third-party provider APIs are not part of this repository and are governed by their respective terms.
+The integration files in this repository are licensed under the [MIT License](LICENSE). The BEON PASS hosted backend and connected third-party APIs are separate services governed by their respective terms.
