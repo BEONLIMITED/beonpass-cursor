@@ -1,7 +1,7 @@
 {
   "name": "beonpass",
-  "version": "1.0.0",
-  "description": "One access wallet for people and AI. Connect developer tools once and use them in Cursor with account-level permissions, approvals, and auditing.",
+  "version": "1.0.1",
+  "description": "One access wallet for people and AI. Use connected developer tools in Cursor with explicit account selection, scoped access, native confirmations, and activity records.",
   "author": {
     "name": "BEON LIMITED",
     "email": "info@beonlimited.com"
